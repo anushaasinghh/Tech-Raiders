@@ -1,31 +1,28 @@
 import React, { useState } from "react";
-import Dashboard from "./Components/Dashboard/Dashboard";
-import Sidebar from "./Components/Dashboard/Sidebar";
-import QuestionPaperGenerator from "./Components/Dashboard/QuestionPaperGenerator";
-import Login from "./Components/Pages/Login";
-
+import Dashboard from "./Component/Dashboard/Dashboard";
+import Login from "./Component/Page/Login";
+import Navbar from "./Component/Navbar/Navbar"; 
 function App() {
-  const [currentView, setCurrentView] = useState("login"); // Tracks the current component to render
+  const [currentView, setCurrentView] = useState("login");
 
   const renderView = () => {
     switch (currentView) {
       case "login":
         return <Login onLogin={() => setCurrentView("dashboard")} />;
       case "dashboard":
-        return (
-          <div style={{ display: "flex" }}>
-            <Sidebar onSelect={(view) => setCurrentView(view)} />
-            <Dashboard />
-          </div>
-        );
-      case "generateQuestionPaper":
-        return <QuestionPaperGenerator />;
+        return <Dashboard />;
       default:
         return <div>Page Not Found</div>;
     }
   };
 
-  return <div>{renderView()}</div>;
+  return (
+    <div>
+      {/* Render the Navbar only if the current view is not "login" */}
+      {currentView !== "login" && <Navbar />}
+      {renderView()}
+    </div>
+  );
 }
 
 export default App;

@@ -1,18 +1,12 @@
 import React from "react";
-import Sidebar from "./Sidebar";
 import QuestionPaperGenerator from "./QuestionPaperGenerator";
 
 const Dashboard = () => {
   return (
-    <div style={{ display: "flex" }}>
-      {/* Sidebar */}
-      <Sidebar />
+    <div style={{ padding: "10px"}}>
+      <h2 style={{ color: "black" , marginLeft: "20px"}}>Welcome Teacher!</h2>
 
-      {/* Main Content */}
-      <div style={{ flexGrow: 1, padding: "20px" }}>
-        <h1>Welcome, Teacher!</h1>
-        <QuestionPaperGenerator />
-      </div>
+      <QuestionPaperGenerator />
     </div>
   );
 };

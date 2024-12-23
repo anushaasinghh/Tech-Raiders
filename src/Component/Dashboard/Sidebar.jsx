@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 const Sidebar = ({ onSelect }) => {
   const handleSelect = (view) => {
@@ -17,4 +17,4 @@ const Sidebar = ({ onSelect }) => {
   );
 };
 
-export default Sidebar;
+export default Sidebar;*/

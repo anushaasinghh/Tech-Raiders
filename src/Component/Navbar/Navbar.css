@@ -1,0 +1,54 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgba(22, 15, 66, 0.7), rgba(8,0,58,0.7)), url('../../assets/logo.jpeg') no repeat center;
+    align-items: center;
+    padding: 10px 20px;
+    
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-title {
+    margin-left: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-right {
+    margin-right: 20px;
+    display: flex;
+    gap: 15px;
+    border-radius: 30px;
+  }
+  .navbar-right:hover{
+    background-color: rgb(107, 101, 101);
+  }
+  .navbar-btn {
+    background-color: #0f0704;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-btn:hover {
+    background-color: #362e2e;
+  }
+  
